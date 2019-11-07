@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function guesscriminal()
+{
+	 var Areaofcrime = document.forms["guess_criminal"]["Areaofcrime"].value;
+	 var MethodOfCrime = document.forms["guess_criminal"]["MethodOfCrime"].value;
+	 var type_of_crime = document.forms["guess_criminal"]["type_of_crime"].value;
+	 
+	 if(Areaofcrime=="")
+	    {
+	             window.alert("Enter Areaofcrime");
+	             document.getElementById("Areaofcrime").focus();
+	            return false;
+	    }
+	 if(MethodOfCrime=="")
+	    {
+	             window.alert("Enter MethodOfCrime");
+	             document.getElementById("MethodOfCrime").focus();
+	            return false;
+	    }
+	 if(type_of_crime=="")
+	    {
+	             window.alert("Enter Areaofcrime");
+	             document.getElementById("type_of_crime").focus();
+	            return false;
+	    }
+	    else
+	    {
+	    	document.getElementById("guess_criminal").action="guessCriminal.jsp?action=find";
+		    document.getElementById("guess_criminal").submit();
+	        return true;
+	    }
+}
+</script>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="f">
+		<img src="./image/p3.png" alt="logo"  width="100"height="70" id="img">
+		<div class="logo"><h1><span id="G">Pune</span>Police</h1></div>
+		<div class="login">
+			<ul>
+				<a href="adminHome.jsp"><li>Back</li></a>
+			</ul>
+		</div>
+		
+		</div>
+	</header>
+	</div>
+	<form  name="guess_criminal" id="guess_criminal" method="post" autocomplete="on" enctype="form-data">
+		<div class="container">
+			<section id="lf">
+			<center><h2>---Criminal Search---</h2></center>
+		          
+			<br>
+			<hr>
+			<div class="nested">
+				<div> Area Of Crime(If Any)</div>
+				<div><input type="text" name="Areaofcrime" id="Areaofcrime"></div>
+			</div>
+			<div class="nested">
+				<div>Method Of Crime(If Any): </div>
+				<div><input type="text" name="MethodOfCrime" id="MethodOfCrime"></div>
+			</div>
+			<div class="nested">
+				<div>Type Of Crime: </div>
+				<div><select name="type_of_crime" id="type_of_crime">
+				  		<option value="">select type of crime</option>
+				  		<option value="lostfound">lostfound</option>
+				  		<option value="stolen">stolen</option>
+				  		<option value="Murder">Murder</option>
+				  		<option value="Rape">Rape</option>
+				  		<option value="missing_person">missing_person</option>
+				 	</select> 		
+				 </div>
+			</div>
+			
+		</div>
+		<center><button type="button" onclick="return guesscriminal()">SEARCH</button>
+		<br>
+		<br>
+		
+	</form>
+	
+
+	<div class="container">
+	<footer>
+		<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+	</footer>
+	</div>
+</body>
+</html>

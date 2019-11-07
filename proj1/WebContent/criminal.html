@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="formValidation.js"></script>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="f">
+		<img src="./image/p3.png" alt="logo"  width="100"height="70" id="img">
+		<div class="logo"><h1><span id="G">Pune</span>Police</h1></div>
+		<div class="login">
+			<ul>
+				<a href="adminHome.jsp"><li>Back</li></a>
+			</ul>
+		</div>
+		
+		</div>
+	</header>
+	</div>
+	<form  name="criminal" id="criminal" method="post" autocomplete="on" enctype="multipart/form-data">
+		<div class="container">
+			<section id="lf">
+			<center><h2>---Criminal Report---</h2></center>
+		          
+			<br>
+			<hr>
+			<div class="nested">
+				<div> Full Name Of Criminal:</div>
+				<div class="input"><input type="text" name="FullName" id="FullName"></div>
+			</div>
+			<div class="nested">
+				<div> FIR-ID</div>
+				<div class="input"><input type="text" name="fir_id" id="fir_id"></div>
+			</div>
+			<div class="nested">
+				<div> Criminal Photo:</div>
+				<div><input type="file" name="criminalPhoto" id="criminalPhoto"></div>
+			</div>
+	<!--  		<div class="nested">
+				<div> Report Type:</div>
+				  <div>
+				  	<select name="report_type" id="report_type">
+				  		<option value="">select report type</option>
+				  		<option value="m">Murder</option>
+				  		<option value="s">Missing Person</option>
+				  		<option value="s">Rape</option>
+					</select>
+				 </div>
+			</div>
+	-->
+			
+			
+			
+			<div class="nested">
+				<div> Date:</div>
+				<div><input type="date" id="Date" name="Date"></div>
+			</div>
+		   
+			<div class="nested">
+				<div> Contact no:</div>
+				<div class="input"><input type="text" name="contactno" id="contactno"></div>
+			</div>
+			<div class="nested">
+				<div> Address: </div>
+				<div><input type="text" name="address" id="address"></div>
+			</div>
+			<div class="nested">
+				<div> Age:</div>
+				<div class="input"><input type="text" name="Age" id=
+					"Age"></div>
+			</div>
+			<div class="nested">
+				<div> Adhaar No :</div>
+				<div class="input"><input type="text" name="AdhaarNo" id="AdhaarNo"></div>
+			</div>
+			
+			
+			<div class="nested">
+				<div>Method Of Crime: </div>
+				<div><input type="text" name="MethodOfCrime" id=
+					"MethodOfCrime"></div>
+			</div>
+			<div class="nested">
+				<div>Status Of Criminal</div>
+				<div><input type="text" name="StatusOfcriminal" id="StatusOfcriminal"></div>
+			</div>
+			
+			<div class="nested">
+				<div> Description *:</div>
+				<div><input type="text" name="Description" id="Description"></div>
+			</div>
+			<div class="nested">
+				<div><input type="hidden" name="form" value="criminal"/></div> 
+			</div>
+			</section>
+		</div>
+	
+	<center><button type="button" onclick="return valid_criminals1()">SUBMIT</button>
+</form>
+<br>
+<br>
+<small>By continuing, you agree to Police Conditions of Use and Privacy Notice.</small></b>
+
+	<div class="container">
+	<footer>
+		<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+	</footer>
+	</div>
+</body>
+</html>

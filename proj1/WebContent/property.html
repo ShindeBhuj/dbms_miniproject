@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Property search</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	function propertysearch() {
+		var ObjectType = document.forms["property_search"]["ObjectType"].value;
+		var DocumentID = document.forms["property_search"]["DocumentID"].value;
+
+		if (ObjectType == "") {
+			window.alert("Enter ObjectType");
+			document.getElementById("ObjectType").focus();
+			return false;
+		}
+		if (DocumentID == "") {
+			window.alert("Enter DocumentID");
+			document.getElementById("DocumentID").focus();
+			return false;
+		} else {
+			document.getElementById("property_search").action = "property_search.jsp?action=find";
+			document.getElementById("property_search").submit();
+			return true;
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="f">
+				<img src="./image/p3.png" alt="logo" width="100" height="70"
+					id="img">
+				<div class="logo">
+					<h1>
+						<span id="G">Pune</span>Police
+					</h1>
+				</div>
+				<div class="login">
+					<ul>
+						<a href="adminHome.jsp"><li>Back</li></a>
+					</ul>
+				</div>
+
+			</div>
+		</header>
+	</div>
+	<form name="property_search" id="property_search" method="post"
+		autocomplete="on" enctype="form-data">
+		<div class="container">
+			<section id="lf">
+				<center>
+					<h2>---Search Property---</h2>
+				</center>
+				<p style="text-align: center;">This application is for providing
+					Lost or Found Information to Police. Information reported under
+					this application is not a subject matter of enquiry/investigation.
+					False report to Police is a punishable offence. Reporting person
+					shall be solely responsible for any false information. Dial 100, if
+					there is any emergency.</p>
+
+				<br> <br>
+				<div class="nested">
+					<div>Object Type *:</div>
+					<div class="input">
+						<input type="text" name="ObjectType" id="ObjectType">
+					</div>
+				</div>
+				<div class="nested">
+					<div>Document ID No. / IMEI no.*:</div>
+					<div>
+						<input type="text" name="DocumentID">
+					</div>
+				</div>
+				<div class="nested">
+					<div>Object Description</div>
+					<div>
+						<input type="text" name="objectDescription">
+					</div>
+				</div>
+			</section>
+		</div>
+		<br>
+		<center>
+			<button type="button" onclick="return propertysearch()">SEARCH</button>
+		</center>
+		<br> <br>
+	</form>
+
+	<div class="container">
+		<footer>
+			<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+		</footer>
+	</div>
+</body>
+</html>

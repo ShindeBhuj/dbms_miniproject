@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function serachfir()
+{
+	/* var name = document.forms["search_fir"]["name"].value;*/
+	 var firId = document.forms["search_fir"]["firId"].value;
+	 
+	 if(firId=="")
+	    {
+	             window.alert("Enter one of them");
+	             document.getElementById("firId").focus();
+	            return false;
+	    }
+	 else if(isNaN(firId))
+	    {
+	            alert("Enter digits only");
+	            document.getElementById("firId").focus();
+	            return false;
+	    }
+		else
+	    {
+	    	document.getElementById("search_fir").action="searchFir.jsp?action=find";
+		    document.getElementById("search_fir").submit();
+	        return true;
+	    }
+}
+</script>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="f">
+		<img src="./image/p3.png" alt="logo"  width="100"height="70" id="img">
+		<div class="logo"><h1><span id="G">Pune</span>Police</h1></div>
+		<div class="login">
+			<ul>
+				<a href="adminHome.jsp"><li>Back</li></a>
+			</ul>
+		</div>
+		
+		</div>
+	</header>
+	</div>
+	<form  name="search_fir" id="search_fir" method="post" autocomplete="on" enctype="form-data">
+		<div class="container">
+			<section id="lf">
+			<center><h2>---FIR Search---</h2></center>
+		          
+			<br>
+			<hr>
+			<!-- <div class="nested">
+				<div>Name Of COMPLAINANT :</div>
+				<div class="input"><input type="text" name="name" id="name"></div>
+			</div>
+		     -->
+			 <div class="nested">
+				<div> FIR ID:</div>
+				<div class="input"><input type="text" name="firId" id="firId"></div>
+			</div>
+			</section>
+		</div>
+		<center><button type="button" onclick="return serachfir()">SEARCH</button>
+		<br>
+		<br>
+		
+	</form>
+	
+
+	<div class="container">
+	<footer>
+		<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+	</footer>
+	</div>
+</body>
+</html>

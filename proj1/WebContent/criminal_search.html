@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function serachcriminal()
+{
+	 var AdhaarNo = document.forms["search_criminal"]["AdhaarNo"].value;
+	 
+	 if(AdhaarNo=="")
+	    {
+	             window.alert("Enter adhaar");
+	             document.getElementById("AdhaarNo").focus();
+	            return false;
+	    }
+	  
+	    else if(isNaN(AdhaarNo))
+	    {
+	            alert("Enter digits only");
+	            return false;
+	    }
+		else if(AdhaarNo.length!=12 )
+	    {
+	            alert("Enter 12 digit Adhaar number");
+	            return false;
+	    }
+		else
+	    {
+	    	document.getElementById("search_criminal").action="criminal_search.jsp?&act=criminal_search.html";
+		    document.getElementById("search_criminal").submit();
+	        return true;
+	    }
+}
+</script>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="f">
+		<img src="./image/p3.png" alt="logo"  width="100"height="70" id="img">
+		<div class="logo"><h1><span id="G">Pune</span>Police</h1></div>
+		<div class="login">
+			<ul>
+				<a href="adminHome.jsp"><li>Back</li></a>
+			</ul>
+		</div>
+		
+		</div>
+	</header>
+	</div>
+	<form  name="search_criminal" id="search_criminal" method="post" autocomplete="on" enctype="form-data">
+		<div class="container">
+			<section id="lf">
+			<center><h2>---Criminal Search---</h2></center>
+		          
+			<br>
+			<hr>
+			<!-- <div class="nested">
+				<div>Name Of Criminal:</div>
+				<div class="input"><input type="text" name="name"></div>
+			</div>
+		     -->
+		    
+			 <div class="nested">
+				<div> Adhaar No*:</div>
+				<div class="input"><input type="text" name="AdhaarNo" id="AdhaarNo"></div>
+			</div>
+			
+			</section>
+		</div>
+		<center><button type="button" onclick="return serachcriminal()">SEARCH</button>
+		<br>
+		<br>
+		
+	</form>
+	
+
+	<div class="container">
+	<footer>
+		<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+	</footer>
+	</div>
+</body>
+</html>

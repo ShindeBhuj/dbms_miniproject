@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="formValidation1.js"></script>
+<style type="text/css">
+.btn{
+text-align:center;
+width:5%;
+}
+.btn button{
+	text-align: center;
+	background-color:#e8491d;
+	border:none;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:8px;
+	padding-bottom:8px;
+	color:white;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="f">
+		<img src="./image/p3.png" alt="logo"  width="100"height="70" id="img">
+		<div class="logo"><h1><span id="G">Pune</span>Police</h1></div>
+		<div class="login">
+			<ul>
+				<a href="index.jsp"><li>Back</li></a>
+			</ul>
+		</div>
+		
+		</div>
+	</header>
+	</div>
+	<form  action="login" name="missing_person"id="missing_person" method="post" autocomplete="on" enctype="multipart/form-data">
+		<div class="container">
+			<section id="lf">
+			<center><h2>---First Information Report(FIR)---</h2></center>
+		          <p style="text-align: center;">This application is for providing FIR to Police. Information reported under this application is not a subject matter of enquiry/investigation. False report to Police is a punishable offence. Reporting person shall be solely responsible for any false information. Dial 100, if there is any emergency. </p>
+
+			<br>
+			<hr>
+			
+			<center><h3>---Complainent Details---</h3></center>
+			<hr>
+		<div class="nested" >
+				<div> Report Type:</div>
+				  <div>
+				  	<select name="report_type" id="report_type">
+				  		<option value=" ">select report type</option>
+				  		<option value="Murder">Murder</option>
+				  		<option value="Missing Person">Missing Person</option>
+				  		<option value="Rape">Rape</option>
+					</select>
+				 </div>
+			</div>
+			<div class="nested" >
+				<div>Near Police Station:</div>
+				
+				<div>
+				  	<select name="police" Id="police_station">
+				  		<option value=" ">select police station</option>
+				  		<option value="Wakad">Wakad</option>
+				  		<option value="Sangavi">Sangavi</option>
+				  		<option value="Hinjewadi">Hinjewadi</option>
+				  		<option value="Chaturshringi">Chaturshringi</option>
+				  		<option value="Nigadi">Nigadi</option>
+				  		<option value="Yerawada">Yerawada</option>
+                        <option value="Khadaki">Khadaki</option>
+                        <option value="Hadapsar">Hadapsar</option>
+                        <option value="Kondhwa">Kondhwa</option>
+                        <option value="Khadak">Khadak</option>
+                          <option value="Vishrambaug">Vishrambaug</option>
+  						  <option value="Shivajinagar">Shivajinagar</option>
+  						 <option value="Kothrud">Kothrud</option>
+  						 <option value="Deccan">Deccan</option>
+  						  <option value="Sahakar Nagar">Sahakar Nagar</option>
+  						   <option value="Dattawadi">Dattawadi</option>
+  						    <option value="Sinhagad">Sinhagad</option>
+  						     <option value="Bibvewadi">Bibvewadi</option>
+  						      <option value="Swargate">Swargate</option>
+  						       <option value="Koregaon Park">Koregaon Park</option>
+					</select>
+				 </div>
+			</div>
+				
+			<div class="nested">
+				<div> Full Name Of Complainant:</div>
+				<div class="input"><input type="text" name="FullName" id="name"></div>
+			</div>
+			
+			
+			<div class="nested">
+				<div> Email :</div>
+				<div><input type="email" name="email" id="email"></div>
+			</div>
+			<div class="nested">
+				<div> Contact no of complainer:</div>
+				<div class="input"><input type="number" name="contact" id="contact_no_complainer"></div>
+			</div>
+			<div class="nested">
+				<div> Address: </div>
+				<div><input type="text" name="address" id="address"></div>
+			</div>
+			<div class="nested">
+				<div> Age:</div>
+				<div class="input"><input type="number" name="Age" id="Age"></div>
+			</div>
+			<div class="nested">
+				<div> Adhaar No :</div>
+				<div class="input"><input type="text" name="adhaar" id="Adhaar"></div>
+			</div>
+			<hr>
+			<center><h4>---Missing Person / Murder / Rape Details---</h4></center>
+            <hr>
+
+			<div class="nested">
+				<div> Full Name of Victim:</div>
+				<div class="input"><input type="text" name="name_mp" id="name_mp"></div>
+			</div>
+			<div class="nested">
+				<div> Relation with Complainent :</div>
+				<div><input type="text" name="Relation_with_Complainent" id="Relation_with_Complainent"></div>
+			</div>
+			<div class="nested">
+				<div> Missing Person's Photo:</div>
+				<div class="input"><input type="file" name="photo_mp" id="photo_mp"></div>
+			</div>
+			
+			<div class="nested">
+				<div> Contact no:</div>
+				<div class="input"><input type="text" name="contact_no_missing" id="contact_no_missing"></div>
+			</div>
+			<div class="nested">
+				<div> Address: </div>
+				<div><input type="text" name="address_mp" id="address_mp"></div>
+			</div>
+			<div class="nested">
+				<div> Age:</div>
+				<div class="input"><input type="text" name="Age" id="Age"></div>
+			</div>
+			<div class="nested">
+				<div> Place of Occurance(If Any)*</div>
+				<div><input type="text" name="Place_of_Occurance" id="Place_of_Occurance"></div>
+			</div>
+			
+			<div class="nested">
+				<div> Description *:</div>
+				<div><input type="text" name="Article_Description" id="Article_Description"></div>
+			</div>
+			<div class="nested">
+				<div><input type="hidden" name="form" value="missing_person"></div> 
+			</div>
+			</section>
+		</div>
+	
+	<center><div class="btn"><button type="button" onclick="return valid_missing_person()">SUBMIT</button></div><br>
+	<small>By continuing, you agree to Police Conditions of Use and Privacy Notice.</small></b></center>
+	</form>
+<br>
+<br>
+
+
+	<div class="container">
+	<footer>
+		<p>Copyright © 2019 Pune City Police .All Rights Reserved.</p>
+	</footer>
+	</div>
+</body>
+</html>
